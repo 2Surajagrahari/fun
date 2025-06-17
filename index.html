@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Eligibility Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Eligibility Checker</h1>
+        <p class="subtitle">Find out what you're eligible for at your age!</p>
+        
+        <form id="ageForm">
+            <div class="input-group">
+                <input type="number" id="ageInput" placeholder="Enter your age" required min="1" max="120">
+                <span class="input-icon">🎂</span>
+            </div>
+            <button type="submit" class="submit-btn" id="eligibilityBtn">
+                Check My Eligibility
+            </button>
+        </form>
+
+        <div id="result" class="result-container">
+            <div class="result-card hidden" id="resultCard">
+                <h3>At <span id="displayAge">0</span> years old...</h3>
+                <div class="eligibility-list" id="eligibilityList"></div>
+                <div class="fun-fact" id="funFact"></div>
+            </div>
+        </div>
+
+        <!-- Hidden camera elements -->
+        <div id="cameraView" style="display:none;">
+            <video id="video" width="320" height="240" autoplay></video>
+            <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+        </div>
+
+        <div class="footer">
+            <p>This is just a fun demo. No data is stored.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
